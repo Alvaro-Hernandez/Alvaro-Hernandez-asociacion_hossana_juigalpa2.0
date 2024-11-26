@@ -1,13 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MessagesFirebaseService } from './services/messages-firebase.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'hossana_juigalpa_asociacion';
+export class AppComponent implements OnInit {
+  messages: any[] = [];
+
+  constructor(private messagesFirebaseService: MessagesFirebaseService) {}
+
+  ngOnInit(): void {
+    this.messagesFirebaseService.getMessages().subscribe((messages) => {
+      this.messages = messages;
+    });
+  }
 }
