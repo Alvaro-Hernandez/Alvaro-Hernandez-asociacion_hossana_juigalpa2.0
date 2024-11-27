@@ -1,0 +1,18 @@
+.footer-content-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-content-container {
+    flex-direction: row;
+  }
+}
+
+.footer-text {
+  color: #a3a3a3;
+  font-size: 1rem;
+  margin: 0.5rem 1.25rem;
+}
