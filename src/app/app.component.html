@@ -1,5 +1,14 @@
-<div *ngFor="let mensaje of messages">
-  <p>{{ mensaje.mensaje }}</p>
-</div>
+<header class="header-container">
+  <nav class="header-nav">
+    <app-header></app-header>
+  </nav>
+</header>
 
-<router-outlet />
+<main class="main-container">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="footer-container">
+  <hr class="footer-divider" />
+  <app-footer></app-footer>
+</footer>
