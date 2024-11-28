@@ -1,0 +1,105 @@
+/* Contenedor principal */
+.friendshipcircle-container {
+  margin: 0 auto;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Sección de texto superior */
+.text-section {
+  text-align: center;
+  color: #ffffff;
+  font-family: "Outfit-Medium";
+}
+
+.text-section h2 {
+  font-size: 2.5rem; /* Tamaño más grande para destacar */
+  margin-bottom: 0.5rem;
+}
+
+.text-section p {
+  font-size: 1.5rem; /* Un poco más grande para destacar */
+  margin-bottom: 1rem;
+}
+
+/* Sección del Grid */
+.grid-section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 90rem;
+}
+
+/* Sección del Mapa */
+.map-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-frame {
+  width: 100%;
+  height: 500px; /* Altura más grande para ocupar más espacio */
+  border-radius: 10px;
+  border: none;
+}
+
+/* Sección de Información y Botones */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  max-width: 400px;
+}
+
+.info-item {
+  text-align: center;
+}
+
+.info-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* Estilo de los botones */
+.action-button {
+  background-color: #1b377d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Outfit-Medium";
+  width: 80%;
+}
+
+.action-button:hover {
+  background-color: #142b5e;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .grid-section {
+    grid-template-columns: 1fr;
+  }
+
+  .map-frame {
+    height: 300px;
+  }
+
+  .info-section {
+    max-width: 100%;
+  }
+}
