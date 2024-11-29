@@ -5,6 +5,11 @@
   src: url("../src/assets/fonts/Outfit-Bold.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Outfit-Medium";
+  src: url("../src/assets/fonts/Outfit-Medium.woff") format("woff");
+}
+
 body,
 html {
   margin: 0;

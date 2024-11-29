@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './friendshipcircle.component.html',
-  styleUrl: './friendshipcircle.component.css'
+  styleUrl: './friendshipcircle.component.css',
 })
-export class FriendshipcircleComponent {
-
-}
+export class FriendshipcircleComponent {}
