@@ -1,11 +1,20 @@
 <section class="nav-container">
   <div class="nav-content">
     <a href="/" class="nav-link underline">Hosanna Juigalpa</a>
-    <div class="nav-links">
+    <div class="nav-links desktop-only">
       <a href="/gallery" class="nav-link">Galería</a>
       <a href="/devotions" class="nav-link">Oraciones</a>
       <a href="/friendshipcircle" class="nav-link">Círculo de Amistad</a>
       <a href="/accessleaders" class="nav-link">Acceso a Líderes</a>
     </div>
+    <div class="hamburger-menu mobile-only" (click)="toggleMenu()">&#9776;</div>
+    @if (isMenuOpen) {
+    <div class="mobile-menu">
+      <a href="/gallery" class="nav-link">Galería</a>
+      <a href="/devotions" class="nav-link">Oraciones</a>
+      <a href="/friendshipcircle" class="nav-link">Círculo de Amistad</a>
+      <a href="/accessleaders" class="nav-link">Acceso a Líderes</a>
+    </div>
+    }
   </div>
 </section>
