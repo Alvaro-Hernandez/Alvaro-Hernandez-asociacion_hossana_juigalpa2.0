@@ -19,22 +19,7 @@
 }
 
 .footer-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-}
-
-.footer-divider {
-  position: absolute;
-  top: 1.5rem;
-  height: 2px;
-  width: 100%;
-  min-width: 18rem;
-  border: none;
-  background: linear-gradient(to right, transparent, white, transparent);
 }
 
 @media (min-width: 640px) {
@@ -52,6 +37,5 @@
 @media (min-width: 1536px) {
   .footer-container {
     margin-top: 1rem;
-    padding-top: 2.5rem;
   }
 }

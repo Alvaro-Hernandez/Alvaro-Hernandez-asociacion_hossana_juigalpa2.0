@@ -1,0 +1,202 @@
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 0 auto;
+}
+
+.gallery-title {
+  color: white;
+  text-align: left;
+  font-size: 24px;
+  margin: 0 0 15px 0;
+  padding-left: 5px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 107px;
+  gap: 3px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #888b8b;
+  padding: 3px;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  image-rendering: auto;
+  display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.image-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 2px 10px rgba(252, 251, 251, 0.4);
+}
+
+.image-1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.image-5 {
+  grid-column: 3;
+  grid-row: 1;
+  object-position: top;
+}
+
+.image-6 {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.image-2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.image-4 {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+}
+
+.image-7 {
+  grid-column: 3 / 5;
+  grid-row: 2;
+}
+
+.image-3 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.image-8 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.image-9 {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  height: 800px;
+  width: auto;
+  margin: auto;
+  object-fit: contain;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.3s;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  color: #bbb;
+}
+
+.discover-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #1f1f1f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Outfit-Medium";
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 400;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.discover-button:hover {
+  background-color: #333333;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-auto-rows: 150px;
+  }
+
+  .gallery-title {
+    font-size: 20px;
+    padding-left: 3px;
+  }
+
+  .discover-button {
+    width: 90%;
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

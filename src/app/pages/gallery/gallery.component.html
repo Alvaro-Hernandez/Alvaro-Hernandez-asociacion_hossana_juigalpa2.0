@@ -1,1 +1,70 @@
-<p>gallery works!</p>
+<div class="gallery-container">
+  <h1 class="gallery-title">Galería de momentos en Dios</h1>
+  <div class="image-grid">
+    <img
+      src="assets/images/1.jpg"
+      alt="Imagen 1"
+      class="image-1"
+      (click)="openModal(0)"
+    />
+    <img
+      src="assets/images/2.jpg"
+      alt="Imagen 2"
+      class="image-2"
+      (click)="openModal(1)"
+    />
+    <img
+      src="assets/images/3.jpg"
+      alt="Imagen 3"
+      class="image-3"
+      (click)="openModal(2)"
+    />
+    <img
+      src="assets/images/4.jpg"
+      alt="Imagen 4"
+      class="image-4"
+      (click)="openModal(3)"
+    />
+    <img
+      src="assets/images/5.jpg"
+      alt="Imagen 5"
+      class="image-5"
+      (click)="openModal(4)"
+    />
+    <img
+      src="assets/images/6.jpg"
+      alt="Imagen 6"
+      class="image-6"
+      (click)="openModal(5)"
+    />
+    <img
+      src="assets/images/7.jpg"
+      alt="Imagen 7"
+      class="image-7"
+      (click)="openModal(6)"
+    />
+    <img
+      src="assets/images/8.jpg"
+      alt="Imagen 8"
+      class="image-8"
+      (click)="openModal(7)"
+    />
+    <img
+      src="assets/images/9.jpg"
+      alt="Imagen 9"
+      class="image-9"
+      (click)="openModal(8)"
+    />
+  </div>
+
+  <button class="discover-button" (click)="openAllImages()">
+    Descúbrelas todas
+  </button>
+
+  <div class="modal" [class.show]="isModalOpen">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <img class="modal-content" [src]="currentImage" alt="Imagen ampliada" />
+    <a class="prev" (click)="prevImage()">&#10094;</a>
+    <a class="next" (click)="nextImage()">&#10095;</a>
+  </div>
+</div>
