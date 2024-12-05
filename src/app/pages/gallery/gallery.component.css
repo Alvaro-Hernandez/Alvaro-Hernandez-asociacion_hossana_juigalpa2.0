@@ -1,3 +1,12 @@
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 0 auto;
+}
+
 .gallery-title {
   color: white;
   text-align: left;
@@ -16,6 +25,7 @@
   border: 2px solid #888b8b;
   padding: 3px;
   border-radius: 5px;
+  flex: 1;
 }
 
 .image-grid img {
@@ -28,6 +38,7 @@
   cursor: pointer;
   image-rendering: auto;
   display: block;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .image-grid img:hover {
@@ -99,7 +110,7 @@
 }
 
 .modal-content {
-  height: 300px;
+  height: 800px;
   width: auto;
   margin: auto;
   object-fit: contain;
@@ -159,7 +170,9 @@
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "Outfit-Medium";
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   text-align: center;
   font-weight: 400;
@@ -183,7 +196,7 @@
 
   .discover-button {
     width: 90%;
-    font-size: 12px;
+    font-size: 14px;
     padding: 8px 16px;
   }
 }

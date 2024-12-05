@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
   imports: [],
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  styleUrls: ['./gallery.component.css'],
 })
 export class GalleryComponent {
   images: string[] = [
@@ -18,9 +18,6 @@ export class GalleryComponent {
     'assets/images/7.jpg',
     'assets/images/8.jpg',
     'assets/images/9.jpg',
-
-
-    
     'assets/images/10.jpg',
     'assets/images/11.jpg',
     'assets/images/12.jpg',
@@ -31,7 +28,7 @@ export class GalleryComponent {
     'assets/images/17.jpg',
     'assets/images/11.jpg',
     'assets/images/12.jpg',
-    'assets/images/10.jpg'
+    'assets/images/10.jpg',
   ];
 
   isModalOpen: boolean = false;
@@ -73,6 +70,18 @@ export class GalleryComponent {
       this.currentIndex--;
     } else {
       this.currentIndex = this.images.length - 1;
+    }
+  }
+
+  // Escucha los eventos del teclado
+  @HostListener('window:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent): void {
+    if (this.isModalOpen) {
+      if (event.key === 'ArrowRight') {
+        this.nextImage();
+      } else if (event.key === 'ArrowLeft') {
+        this.prevImage();
+      }
     }
   }
 }
