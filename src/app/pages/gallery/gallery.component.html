@@ -12,6 +12,9 @@
     <img src="assets/images/9.jpg" alt="Imagen 9" class="image-9" (click)="openModal(8)" />
   </div>
 
+  <button class="discover-button" (click)="openAllImages()">Descubre todas</button>
+
+
   <div class="modal" [class.show]="isModalOpen">
     <span class="close" (click)="closeModal()">&times;</span>
     <img class="modal-content" [src]="currentImage" alt="Imagen ampliada">
